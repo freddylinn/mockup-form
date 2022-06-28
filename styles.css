@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "azonix";
+    src: url(./fonts/Azonix.otf);
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/background.jpg);
+    background-size: cover;
+    width: 550px;
+    height: 100vh;
+}
+
+.backgroundBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: #282828ba;
+    height: 200px;
+    width: 550px;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+#logoText {
+    font-family: "azonix", sans-serif;
+    font-size: 42px;
+    color: white;
+}
