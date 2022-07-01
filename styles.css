@@ -1,6 +1,7 @@
 :root {
     --left-width: max(37vw,400px);
     --right-width: max(63vw, 550px);
+    --shadow-color: #393939bb;
 }
 
 @font-face {
@@ -13,6 +14,7 @@ body {
     flex-wrap: nowrap;
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 .sidebar {
@@ -20,6 +22,7 @@ body {
     background-size: cover;
     width: var(--left-width);
     height: 100vh;
+    display: flex;
 }
 
 .backgroundBox {
@@ -28,9 +31,10 @@ body {
     justify-content: center;
     gap: 18px;
     background: #282828ba;
-    height: 200px;
+    height: 180px;
     width: var(--left-width);
-    margin-top: 82px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #logo {
@@ -50,31 +54,77 @@ body {
     width: var(--right-width);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 fieldset {
-    font-family: "Roboto", sans-serif;
-    margin: 20px;
     width: var(--right-width);
     border: none;
     padding: 24px 0;
     background-color: white;
-    box-shadow: 0 4px 4px -4px #393939bb;
+    box-shadow: 0 4px 4px -4px var(--shadow-color);
 }
 
-input,label {
+input,label,#subButton {
     display: block;
     margin-left: 48px;
 }
 
+#redInfo {
+    margin-left: 51px;
+    margin-bottom: 32px;
+    font-size: 1.2rem;
+}
+
 input {
     width: 200px;
-    margin-bottom: 24px;
-    margin-top: 4px;
+    margin-bottom: 28px;
+    margin-top: 5px;
+}
+
+input:focus {
+    border: 2px solid #3dc3ef;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: 0 4px 4px -4px var(--shadow-color);
 }
 
 label {
-    font-weight: bold;
+    font-weight: lighter;
     letter-spacing: 0.7px;
+    font-size: 1.1rem;
+}
+
+label.required::before {
+    content: "*";
+    color: red;
+}
+
+#star {
+    color: red;
+}
+
+#phone {
+    width: 130px;
+}
+
+#subButton {
+    width: 230px;
+    height: 50px;
+    color: white;
+    background-color: #497452;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 32px;
+    box-shadow: 0 4px 4px -4px var(--shadow-color);
+}
+
+#subButton:hover {
+    background-color: #7ba484;
+}
+
+#subButton:active {
+    box-shadow: inset 0 0 10px var(--shadow-color);
 }

@@ -20,6 +20,9 @@
             <fieldset>
                 <table>
                     <tr>
+                        <p id="redInfo"> Elements marked with <span id="star">*</span> are required.</p>
+                    </tr>
+                    <tr>
                         <td>
                             <label for="firstName">First Name</label>
                             <input type="text" name="firstName" maxlength="20">
@@ -31,23 +34,26 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" placeholder="example@gmail.com">
+                            <label for="email" class="required">Email</label>
+                            <input type="email" name="email" placeholder="example@gmail.com" minlength="4" maxlength="100" required>
                         </td>
                         <td>
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" placeholder="123-456-7890">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="15" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please include dashes">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="password1">Password</label>
-                            <input type="password" name="password1">
+                            <label for="password1" class="required">Password</label>
+                            <input type="password" name="password1" maxlength="40" required>
                         </td>
                         <td>
-                            <label for="password2">Confirm Password</label>
-                            <input type="password" name="password2">
+                            <label for="password2" class="required">Confirm Password</label>
+                            <input type="password" name="password2" maxlength="40" required>
                         </td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" id="subButton">Create Account</button></td>
                     </tr>
                 </table>
             </fieldset>
